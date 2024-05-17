@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/NordiskVR/Scenes/Main 2.unity
+    guid: a535e6fb5ca8c754ba43161f075abdf9
+  - enabled: 1
     path: Assets/NordiskVR/Scenes/Main.unity
     guid: f05430748fb931a4bb4902bf5a1aa733
   m_configObjects:
