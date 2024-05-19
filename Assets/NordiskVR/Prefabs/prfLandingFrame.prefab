@@ -26235,7 +26235,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementsList:
   - {fileID: 0}
-  - {fileID: 2672445343841225130}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 2481515487458757313}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   autoStart: 1
   invertDelays: 0
   cloneDelays: 0
@@ -26246,7 +26256,7 @@ MonoBehaviour:
   appearDelay_SpeedMultiplier: 1
   disappearDelay_SpeedMultiplier: 0.2
   currentState: 3
-  useDelays: 1
+  useDelays: 0
   audioSource: {fileID: 8014200779736316157}
   openSound: {fileID: 8300000, guid: 6b2fc2b8965a7384ead46600acaab7d2, type: 3}
   closeSound: {fileID: 8300000, guid: 94e9b7172c5a62b4e8797e76d23da5bc, type: 3}
