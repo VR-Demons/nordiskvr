@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,17 @@ public class MenuController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(GameState.Section+" selected.");
-        sections[GameState.Section].SetActive(true);
+        StartUI();
     }
 
+    public void StartUI()
+    {
+        sections[GameState.Section].SetActive(true);
+        InterfaceAnimManager[] managers = sections[GameState.Section].GetComponentsInChildren<InterfaceAnimManager>();
+        foreach (InterfaceAnimManager manager in managers)
+        {
+            manager.startAppear();
+        }
+        Debug.Log(GameState.Section + " selected, "+ managers.Length+" sections.");
+    }
 }

@@ -9,14 +9,15 @@ public class VideoController : MonoBehaviour
 {
     [SerializeField] private VideoPlayer player;
     [SerializeField] private List<InterfaceAnimManager> animators;
-    [SerializeField] private UnityEvent OnFinish;
+    [SerializeField] private UnityEvent OnFinish, OnPause;
+    private Coroutine flow;
     public void PlayVideos()
     {
         foreach (var animator in animators)
         {
             animator.startAppear();
         }
-        StartCoroutine(Pause(3, 10, 5));
+        flow = StartCoroutine(Pause(3.5f, 10, 5));
     }
     public void HideVideos()
     {
@@ -24,16 +25,18 @@ public class VideoController : MonoBehaviour
         {
             animator.startDisappear();
         }
+        StopCoroutine(flow);
     }
 
     private IEnumerator Pause(float delay, float pause, float ending)
     {
         yield return new WaitForSeconds(delay);
         player.Pause();
+        OnPause.Invoke();
         yield return new WaitForSeconds(pause);
         player.Play();
         yield return new WaitForSeconds(ending);
-        HideVideos();
         OnFinish.Invoke();
+        HideVideos();
     }
 }
