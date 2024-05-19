@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class TunnelController : MonoBehaviour
 {
     [SerializeField] float Delay;
+    [SerializeField] int SceneIndex;
     void Start()
     {
         StartCoroutine(ChangeScene());
@@ -15,6 +16,6 @@ public class TunnelController : MonoBehaviour
     private IEnumerator ChangeScene()
     {
         yield return new WaitForSeconds(Delay);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(SceneIndex);
     }
 }
