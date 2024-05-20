@@ -31,10 +31,10 @@ public class VideoController : MonoBehaviour
     private IEnumerator Pause(float delay, float pause, float ending)
     {
         yield return new WaitForSeconds(delay);
-        player.Pause();
+        //player.Pause();
         OnPause.Invoke();
         yield return new WaitForSeconds(pause);
-        player.Play();
+        //player.Play();
         yield return new WaitForSeconds(ending);
         OnFinish.Invoke();
         HideVideos();
