@@ -26,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: ad99e9bc0d089ad41bc57400ff44a8fc, type: 3}
+        m_Texture: {fileID: 2800000, guid: c3ea6391176b4bf459b6625f0f89fa4f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -59,7 +59,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Dissolve: 0.07577014
+    - _Dissolve: 0.0017296076
     - _DissolveAmount: 0.5
     - _EdgeColorIntensity: 1
     - _EdgeWidth: 0.05
